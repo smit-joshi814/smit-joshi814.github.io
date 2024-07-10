@@ -22,16 +22,51 @@
 	<!-- Theme CSS -->
 	<link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
 
+	<style>
+		.window_button {
+			position: fixed;
+			top: 300px;
+			right: 30px;
+			z-index: 999;
+			-webkit-transform-origin: 100% 50%;
+			-moz-transform-origin: 100% 50%;
+			-webkit-transform: rotate(90deg) translate(50%, -50%);
+			-moz-transform: rotate(90deg) translate(50%, -50%);
+			transition: all 0.2s;
+		}
 
+		.window_button a {
+			background: #098dcf;
+			color: #fff;
+			font-size: 13px;
+			box-shadow: #333 0px 2px 5px;
+			border-radius: 4px;
+			padding: 10px 10px 10px 10px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			font-family: 'Karla', sans-serif;
+			font-weight: 900;
+			-webkit-transform: rotate(90deg);
+			-moz-transform: rotate(90deg);
+			filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+			transition: background-color 0.5s ease;
+		}
+	</style>
 </head>
 
 <body>
+
+
+	<div class="window_button">
+		<a href="#important-dates" data-bs-toggle="modal" data-bs-target="#important-dates">Important Dates</a>
+	</div>
 	<header id="header" class="header fixed-top">
 		<div class="branding">
 			<div class="container-fluid">
 				<nav class="main-nav navbar navbar-expand-lg">
 					<div class="site-logo"><a class="scrollto" href="#hero-block"><img class="logo-icon"
-								src="assets/images/logo.jpg" alt="logo" style="max-height: 75px;min-height: 50px;"></a></div>
+								src="assets/images/logo.jpg" alt="logo" style="max-height: 100px;min-height: 75px;"></a>
+					</div>
 
 					<!-- <div class="navbar-btn order-lg-2"><a class="btn btn-secondary" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/devconf-free-bootstrap-4-conference-template-for-tech-conferences-and-events/" target="_blank">Tickets</a></div> -->
 
@@ -46,8 +81,12 @@
 							<li class="nav-item"><a class="nav-link scrollto" href="#about-section">About</a></li>
 							<li class="nav-item"><a class="nav-link scrollto" href="#speakers-section">Speakers</a></li>
 							<li class="nav-item"><a class="nav-link scrollto" href="#schedule-section">Schedule</a></li>
-							<li class="nav-item"><a class="nav-link scrollto" href="#committee-section">Committee</a></li>
+							<li class="nav-item"><a class="nav-link scrollto" href="#committee-section">Committee</a>
+							</li>
 							<li class="nav-item"><a class="nav-link scrollto" href="#gallery-section">Gallery</a></li>
+							<li class="nav-item"><a class="nav-link scrollto" href="#participation-policy"
+									data-bs-toggle="modal" data-bs-target="#participation-policy">Participation
+									Policy</a></li>
 							<li class="nav-item"><a class="nav-link scrollto"
 									href="#publication-section">Publication</a></li>
 						</ul><!--//nav-->
@@ -71,20 +110,25 @@
 			</div>
 		</div>
 		<div class="hero-block-mask"></div>
-		<div class="container">
-			<div class="hero-text-block">
-				<div class="hero-meta mb-3">
+		<div class="container mt-5">
+			<div class="hero-text-block" style="max-width: max-content;">
+				<div class="hero-meta mb-3 text-center">
 					<h1 class="text-white h3">
 						First International Conference on Advances in
 						Smart Computing and
 						Applications (ICASmCA-2024)
 					</h1>
 				</div>
-				<div class="hero-intro mb-4">
+				<div class="hero-intro mb-4 text-center">
 					<!-- <i class="far fa-calendar-alt me-2"></i>12 - 15 Oct  -->
-					<i class="fas fa-map-marker-alt mx-2"></i>FCAIT-GLS University,Ahmedabad
+					 <div>
+						 <i class="fas fa-map-marker-alt mx-2 text"></i>FCAIT-GLS University,Ahmedabad
+					 </div>
+					 <div>
+						<i class="fa fa-calendar ma-2 text"></i> 10<sup>th</sup>&nbsp;- &nbsp;11<sup>th</sup> January, 2025
+					 </div>
 				</div>
-				<div class="hero-cta">
+				<div class="hero-cta text-center">
 					<a class="btn btn-primary btn-lg" href="https://easychair.org/registration" target="_blank">Call For
 						Paper</a>
 					<a class="btn btn-primary btn-lg" href="https://easychair.org/registration"
@@ -131,8 +175,9 @@
 	<section id="about-section" class="about-section section theme-bg-light pb-4">
 		<div class="container">
 			<div class="mb-3">
-				<h3 class="section-heading text-center text-secondary mb-3">About-GLS University</h3>
-				<div class="section-intro single-col-max mx-auto mb-4">GLS University is established in the year of 2015
+				<h3 class="section-heading text-center text-secondary mb-3">GLS University</h3>
+				<div class="section-intro single-col-max mx-auto mb-4" style="text-align: justify;">GLS University is
+					established in the year of 2015
 					with the objective of providing an ideal and creative learning environment and continuing the
 					tradition
 					of excellence in education of the sponsoring body of the University, viz., Gujarat Law Society
@@ -148,8 +193,9 @@
 				</div>
 			</div>
 			<div class="mb-3">
-				<h3 class="section-heading text-center text-secondary mb-3">About-FCAIT</h3>
-				<div class="section-intro single-col-max mx-auto mb-4">GLS University under its Faculty of Computer
+				<h3 class="section-heading text-center text-secondary mb-3">FCAIT</h3>
+				<div class="section-intro single-col-max mx-auto mb-4" style="text-align: justify;">GLS University under
+					its Faculty of Computer
 					Applications and Information Technology offers courses like BCA, PGDCA, MSc (IT) and Integrated MSc
 					(IT). GLS (I & R. K. Desai) Institute of Computer Applications(NAAC Accredited) started a BCA
 					programme in 1999 with the mission of enabling IT professionals of tomorrow. All the programmes
@@ -162,8 +208,9 @@
 				</div>
 			</div>
 			<div class="mb-3">
-				<h3 class="section-heading text-center text-secondary mb-3">About-FCT</h3>
-				<div class="section-intro single-col-max mx-auto mb-4">GLS (Shailesh R. Parikh) Institute of Computer
+				<h3 class="section-heading text-center text-secondary mb-3">FCT</h3>
+				<div class="section-intro single-col-max mx-auto mb-4" style="text-align: justify;">GLS (Shailesh R.
+					Parikh) Institute of Computer
 					Technology is established in 1999. After the inception of GLS University the Institute is known as
 					Faculty of Computer Technology. The Institute comprises of various amenities such as well-equipped
 					computer laboratories and classrooms, faculty rooms, student reading rooms, library,
@@ -498,12 +545,12 @@
 							<div class="info p-3">
 								<div class="desc px-3">
 									<ul class="list-style">
-										<li class="list-item">B. H. Joshi, Pro-Vost</li>
-										<li class="list-item">Chandani Kapadia, COO</li>
+										<li class="list-item">Chandani Kapadia, ED</li>
+										<li class="list-item">Dharmesh Shah, Pro-Vost</li>
 										<li class="list-item">Hitesh Ruparel, Director General</li>
-										<li class="list-item">Dharmesh Shah, Registrar</li>
-										<li class="list-item">R P. Soni, Dean, FCAIT</li>
-										<li class="list-item">Bhushan Trivedi, Dean</li>
+										<li class="list-item">Dhruv Brahmbhatt, Registrar</li>
+										<li class="list-item">Savita Gandhi, Dean, FCAIT</li>
+										<li class="list-item">Harshal Arolkar, HOD</li>
 									</ul>
 								</div>
 							</div>
@@ -520,11 +567,11 @@
 								<div class="desc px-3">
 									<ul class="list-style">
 										<li class="list-item">Chair: Devarshi Mehta, Associate Professor.</li>
-										<li class="list-item">Co-Chair: Ankita Kanojiya, Assistant Professor</li>
+										<li class="list-item">Co-Chair: Krupa Mehta, Assistant Professor</li>
 										<li class="list-item">Members: Arpit Jain, Assistant Professor</li>
-										<li class="list-item">Bharti Shah, Assistant Professor</li>
-										<li class="list-item">Jyoti Dubey, Assistant Professor</li>
-										<li class="list-item">Vinita Nair, Assistant Professor</li>
+										<li class="list-item">Snehal Shukla, Assistant Professor</li>
+										<li class="list-item">Rachana Chaudhari, Assistant Professor</li>
+										<li class="list-item">Vishal Narvani, Assistant Professor</li>
 									</ul>
 								</div>
 							</div>
@@ -557,7 +604,7 @@
 							<div class="info p-3">
 								<div class="desc px-3">
 									<ul class="list-style">
-										<li class="list-item">Dr. Zakiya Malek</li>
+										<!-- <li class="list-item">Dr. Zakiya Malek</li> -->
 										<li class="list-item">Dr. Arpit Jain</li>
 									</ul>
 								</div>
@@ -595,18 +642,18 @@
 					</li>
 					<li><span class="icon-holder me-2"><i class="fas fa-utensils"></i></span>FREE drinks, refreshments,
 						lunch and dinner</li>
-					<li><span class="icon-holder me-2"><i class="fas fa-tshirt"></i></span>FREE <a
-							href="https://made4dev.com/" target="_blank">premium developer tees from made4dev</a></li>
+					<li><span class="icon-holder me-2"><i class="fas fa-tshirt"></i></span>FREE <a href="#"
+							target="_blank">premium developer tees from made4dev</a></li>
 					<li><span class="icon-holder me-2"><i class="fas fa-book"></i></span>FREE Udemy courses</li>
-					<li><span class="icon-holder me-2"><i class="fas fa-gift"></i></span>FREE <a
-							href="https://themes.3rdwavemedia.com/freebies/" target="_blank">Bootstrap templates and
+					<li><span class="icon-holder me-2"><i class="fas fa-gift"></i></span>FREE <a href="#"
+							target="_blank">Bootstrap templates and
 							digital resources</a> for developers worth over $100</li>
 				</ul>
 			</div>
 
 		</div>
 	</section>
-	
+
 	<!--//tickets-section-->
 
 
@@ -616,7 +663,7 @@
 			<!-- Gallery -->
 			<div class="row justify-content-around">
 				<div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-					<img src="assets/images/venue/venue-1.jpg" class="w-100 shadow-1-strong rounded mb-4"
+					<img src="assets/images/venue/venue-1.png" class="w-100 shadow-1-strong rounded mb-4"
 						alt="Boat on Calm Water" />
 
 					<img src="assets/images/venue/venue-2.jpg" class="w-100 shadow-1-strong rounded mb-4"
@@ -751,6 +798,109 @@
 			</div><!--//modal-content-->
 		</div><!--//modal-dialog-->
 	</div><!--//modal-->
+
+	<!-- Modal Speaker -->
+	<div class="modal modal-speaker participation-policy" id="participation-policy" tabindex="-1" role="dialog"
+		aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 id="speaker-1-ModalLabel" class="modal-title sr-only">Participation Policy</h4>
+				</div>
+				<div class="modal-body p-0">
+					<div class="theme-bg-light p-5">
+						<div class="row">
+							<div class="col-12 col-md-auto text-center">
+								<img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+									src="assets/images/speakers/speaker-1.jpg" alt="" />
+							</div>
+
+							<div class="col text-center text-md-start mx-auto">
+								<h2 class="name mb-2">Participation Policy</h2>
+							</div><!--//col-->
+						</div><!--//row-->
+					</div>
+					<div class="desc p-4 p-lg-5">
+						<p style="text-align: justify;">As we are passing through unprecedented times and there is
+							always a concern which has been
+							moving for the last 6 months and is still on due to Covid 19. We as organisers understand it
+							well and are trying to monitor the update from the Central and State Government in India.
+							Although almost many of the conference activities have turned digital due to this since
+							lockdown was announced, but now slowly and gradually restrictions are being lifted by
+							Central and State Governments from time to time with SOP's. Hence taking into consideration
+							of Government guidelines we are also trying our best to make this conference beneficial for
+							all authors.
+
+							Hence, for those authors who do not wish to attend the conference physically can present
+							their papers in digital sessions via ZOOM. In both the cases conference papers will be moved
+							to publication.</p>
+					</div>
+				</div><!--//modal-body-->
+			</div><!--//modal-content-->
+		</div><!--//modal-dialog-->
+	</div><!--//modal-->
+	<!-- Modal Speaker -->
+	<div class="modal modal-speaker important-dates" id="important-dates" tabindex="-1" role="dialog"
+		aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 id="speaker-1-ModalLabel" class="modal-title sr-only">Important Dates</h4>
+				</div>
+				<div class="modal-body p-0">
+					<div class="theme-bg-light p-5">
+						<div class="row">
+							<div class="col-12 col-md-auto text-center">
+								<img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+									src="assets/images/speakers/speaker-1.jpg" alt="" />
+							</div>
+
+							<div class="col text-center text-md-start mx-auto">
+								<h2 class="name mb-2">Important Dates</h2>
+							</div><!--//col-->
+						</div><!--//row-->
+					</div>
+					<div class="desc p-4 p-lg-5">
+						<table class="table table-borderd">
+							<tbody>
+								<tr>
+									<td class="text-bg-primary text-white">Paper Submission Opens</td>
+									<td class="fw-bold">10<sup>th</sup> August, 2024</td>
+								</tr>
+								<tr>
+									<td class="text-bg-primary text-white">Papers Due(Regular Tracks)</td>
+									<td class="fw-bold">10<sup>rd</sup> September 2024</td>
+								</tr>
+								<tr>
+									<td class="text-bg-primary text-white">Papers Due(Special Sessions)</td>
+									<td class="fw-bold">20<sup>rd</sup> September 2024</td>
+								</tr>
+								<tr>
+									<td class="text-bg-primary text-white">Notification</td>
+									<td class="fw-bold">15<sup>th</sup> Octomber 2024</td>
+								</tr>
+								<tr>
+									<td class="text-bg-primary text-white">Registration Due</td>
+									<td class="fw-bold">20<sup>rd</sup> Octomber 2024</td>
+								</tr>
+								<tr>
+									<td class="text-bg-primary text-white">Final Manuscript Of Submission Due</td>
+									<td class="fw-bold">30<sup>rd</sup> Octomber 2024</td>
+								</tr>
+								<tr>
+									<td class="text-bg-primary text-white">Conference Dates</td>
+									<td class="fw-bold">10<sup>th</sup> - 11<sup>th</sup>, January 2025</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div><!--//modal-body-->
+			</div><!--//modal-content-->
+		</div><!--//modal-dialog-->
+	</div><!--//modal-->
+
 
 	<!-- Javascript -->
 	<script src="assets/plugins/popper.min.js"></script>
