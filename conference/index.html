@@ -35,6 +35,14 @@
 			transition: all 0.2s;
 		}
 
+		/* Show the dropdown menu on hover */
+		.nav-item.dropdown:hover .dropdown-menu {
+			display: block;
+			margin-top: 0;
+			/* Remove the default margin */
+		}
+
+
 		.window_button a {
 			background: #098dcf;
 			color: #fff;
@@ -50,6 +58,24 @@
 			-moz-transform: rotate(90deg);
 			filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
 			transition: background-color 0.5s ease;
+		}
+
+		.card {
+			height: 100%;
+			border-radius: 25px;
+			background-color: #cce5ff;
+		}
+
+		.list-item-box {
+			margin-bottom: 1rem;
+		}
+
+		.card-body {
+			font-weight: bold;
+		}
+
+		.designation {
+			font-weight: normal;
 		}
 	</style>
 </head>
@@ -78,13 +104,31 @@
 						<ul class="nav navbar-nav">
 							<li class="nav-item"><a class="nav-link text-primary scrollto" href="#hero-block">Home</a>
 							</li>
-							<li class="nav-item"><a class="nav-link text-primary scrollto"
-									href="#about-section">About</a></li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle text-primary scrollto" href="#about-section"
+									id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+									aria-expanded="false">
+									About
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<a class="dropdown-item scrollto" href="#icasca-about">ICASCA</a>
+									<a class="dropdown-item scrollto" href="#fcait-about">FCAIT</a>
+									<a class="dropdown-item scrollto" href="#fet-about">FET</a>
+									<a class="dropdown-item scrollto" href="#gls-university-about">GLS University</a>
+									<a class="dropdown-item scrollto" href="#ahmedabad-about">About Ahmedabad</a>
+								</div>
+							</li>
+
 							<li class="nav-item"><a class="nav-link text-primary scrollto"
 									href="#committee-section">Committees</a>
 							</li>
+
+
 							<li class="nav-item"><a class="nav-link text-primary scrollto"
 									href="#speakers-section">Speakers</a></li>
+							<li class="nav-item"><a class="nav-link text-primary scrollto"
+									href="#tracks-section">Tracks</a>
+							</li>
 							<li class="nav-item"><a class="nav-link text-primary scrollto"
 									href="#publication-section">Publication</a></li>
 							<li class="nav-item"><a class="nav-link text-primary scrollto"
@@ -150,7 +194,45 @@
 	</div><!--//hero-block-->
 	<section id="about-section" class="about-section section theme-bg-light pb-4">
 		<div class="container">
-			<div class="mb-3">
+			<div class="section" id="icasca-about">
+				<h3 class="section-heading text-center text-secondary mb-3">ICASCA</h3>
+				<div class="section-intro mx-auto mb-4" style="text-align: justify;">GLS University is proud to announce
+					the First International Conference on Advances in Smart Computing and Applications (ICASCA-2025),
+					scheduled to be held on [insert dates] at our state-of-the-art campus. This prestigious event aims
+					to bring together researchers, academicians, industry professionals, and students from around the
+					globe to exchange and share their experiences and research results on all aspects of smart computing
+					and its applications. ICASCA-2025 will feature keynote speeches from eminent scholars, technical
+					sessions on cutting-edge topics, and opportunities for networking and collaboration. Join us to
+					explore the future of smart computing, discover innovative solutions, and contribute to the
+					advancement of this dynamic field.
+				</div>
+			</div>
+			<div class="section" id="fcait-about">
+				<h3 class="section-heading text-center text-secondary mb-3">FCAIT</h3>
+				<div class="section-intro mx-auto mb-4" style="text-align: justify;">GLS University under
+					its Faculty of Computer
+					Applications and Information Technology offers courses like BCA, PGDCA, MSc (IT) and Integrated MSc
+					(IT). GLS (I & R. K. Desai) Institute of Computer Applications(NAAC Accredited) started a BCA
+					programme in 1999 with the mission of enabling IT professionals of tomorrow. All the programmes
+					under Faculty of Computer Applications & IT are designed using Open Source as a delivery platform.
+					The department offers best-in-class infrastructure with well-equipped computer laboratories. The MSc
+					(IT) programme along with Post Graduate Diploma in Computer Applications (PGDCA) was started along
+					with the inception of the university. The programme has been well accepted by the student
+					fraternity. The third batch of MSc (IT) students has been also well accepted by IT Industry. GLSU
+					has started a new five year Integrated MSc(IT) programme in the year 2016.
+				</div>
+			</div>
+			<div class="section" id="fet-about">
+				<h3 class="section-heading text-center text-secondary mb-3">FET</h3>
+				<div class="section-intro mx-auto mb-4" style="text-align: justify;">FET, is a four-year
+					undergraduate academic degree program in computer science. As a computer scientist, you would be
+					expected to apply your knowledge in building apps for smartphones, designing robots and solving
+					computational puzzles. It is a course intended for young and curious minds to seek proficiency in
+					understanding and analyzing various real-time engineering issues and proposing computational
+					solutions using various scientific techniques.
+				</div>
+			</div>
+			<div class="section" id="gls-university-about">
 				<h3 class="section-heading text-center text-secondary mb-3">GLS University</h3>
 				<div class="section-intro mx-auto mb-4" style="text-align: justify;">GLS University is
 					established in the year of 2015
@@ -168,29 +250,19 @@
 					& Applications, Business Management, Commerce, Business Administration, Education, Design, Law etc.
 				</div>
 			</div>
-			<div class="mb-3">
-				<h3 class="section-heading text-center text-secondary mb-3">FCAIT</h3>
-				<div class="section-intro mx-auto mb-4" style="text-align: justify;">GLS University under
-					its Faculty of Computer
-					Applications and Information Technology offers courses like BCA, PGDCA, MSc (IT) and Integrated MSc
-					(IT). GLS (I & R. K. Desai) Institute of Computer Applications(NAAC Accredited) started a BCA
-					programme in 1999 with the mission of enabling IT professionals of tomorrow. All the programmes
-					under Faculty of Computer Applications & IT are designed using Open Source as a delivery platform.
-					The department offers best-in-class infrastructure with well-equipped computer laboratories. The MSc
-					(IT) programme along with Post Graduate Diploma in Computer Applications (PGDCA) was started along
-					with the inception of the university. The programme has been well accepted by the student
-					fraternity. The third batch of MSc (IT) students has been also well accepted by IT Industry. GLSU
-					has started a new five year Integrated MSc(IT) programme in the year 2016.
-				</div>
-			</div>
-			<div class="mb-3">
-				<h3 class="section-heading text-center text-secondary mb-3">FET</h3>
-				<div class="section-intro mx-auto mb-4" style="text-align: justify;">FET, is a four-year
-					undergraduate academic degree program in computer science. As a computer scientist, you would be
-					expected to apply your knowledge in building apps for smartphones, designing robots and solving
-					computational puzzles. It is a course intended for young and curious minds to seek proficiency in
-					understanding and analyzing various real-time engineering issues and proposing computational
-					solutions using various scientific techniques.
+			<div class="section" id="ahmedabad-about">
+				<h3 class="section-heading text-center text-secondary mb-3">About Ahmedabad</h3>
+				<div class="section-intro mx-auto mb-4" style="text-align: justify;">Ahmedabad, the vibrant city known
+					for its rich heritage and dynamic spirit, will host the First International Conference on Advances
+					in Smart Computing and Applications (ICASCA-2025). Taking place from [insert dates] at GLS
+					University, this conference is set to be a landmark event in the realm of smart computing.
+					Ahmedabad, a hub of innovation and technology, provides the perfect backdrop for this international
+					gathering. Attendees will have the opportunity to immerse themselves in the latest advancements in
+					smart computing while exploring the city’s unique blend of tradition and modernity. Join us in
+					Ahmedabad to connect with global experts, engage in insightful discussions, and contribute to
+					groundbreaking research in smart computing.
+
+
 				</div>
 			</div>
 		</div>
@@ -265,6 +337,149 @@
 
 	<!--//speakers-section-->
 
+	<section id="tracks-section" class="tracks-section section">
+		<div class="container">
+			<h3 class="section-heading text-center mb-5">Tracks</h3>
+			<div class="row">
+				<div class="col-md-4 list-item-box">
+					<div class="card">
+						<div class="card-body">
+							<div>ARTIFICIAL INTELLIGENCE & ML</div>
+							<div class="designation">
+								<ul class="lists">
+									<li>Traditional AI </li>
+									<li>Cognitive AI </li>
+									<li>Knowledge Based Systems &amp; Expert Systems </li>
+									<li>Machine Learning and Hybrid Systems </li>
+									<li>AI Computer Vision and Image Processing</li>
+									<li>NLP, Machine Interactions, Generative and Creative AI </li>
+									<li>Intelligent Web </li>
+									<li>Ethics in AI</li>
+									<li>Game Theory</li>
+									<li>Humonid Robots</li>
+									<li>Natural Language Processing</li>
+									<li>AI/ML and IoT </li>
+									<li>Parallel/ Distributed and simulation in AI/ML </li>
+									<li>Multi Agent Systems and Miscellaneous</li>
+									<li>Data Science &amp; ML</li>
+									<li>Data Management and Visualization </li>
+									<li>Data science &amp; Its applications</li>
+									<li>Big Data Architecture and Algorithms</li>
+									<li>Big Data Analytics</li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-md-4 list-item-box">
+					<div class="card">
+						<div class="card-body">
+							<div>CYBER SECURITY</div>
+							<div class="designation">
+								<ul class="lists">
+									<li>Cyber threats prevention, detection and mitigation</li>
+									<li>Security, trust and privacy for emerging cyber-physical systems</li>
+									<li>Network Security and Protocols, next-generation architectures, Access control and
+										Intrusion detection</li>
+									<li>Computational intelligence in Security</li>
+									<li>Security and Privacy of Social-media</li>
+									<li>Detection and prevention of cybercrimes such as fraud and phishing</li>
+									<li>Cyber and Information assurance, security, and public policy</li>
+									<li>Security ontology, models, protocols &amp; policies</li>
+									<li>Side Channel attacks and defenses</li>
+									<li>Cloud Security</li>
+									<li>Digital forensics</li>
+									<li>Blockchain for Cybersecurity and privacy</li>
+									<li>Malware Analysis and Detection Methodologies</li>
+									<li>Smartphone Security and Privacy</li>
+									<li>Security of mobile, peer-to-peer and pervasive
+										services in clouds.
+									</li>
+									<li>Web Security </li>
+									<li>Ransomware attacks and defense </li>
+									<li> IoT cyber threat attacks, detection &amp; mitigation</li>
+									<li> IoT and critical infrastructure security</li>
+									<li> National Security and Strategic Studies</li>
+									<li> Reforming Inteligence for National Security</li>
+									<li> Intelligence Practices for National Security</li>
+									<li> Intelligence integration </li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			
+				<div class="col-md-4 list-item-box">
+					<div class="card">
+						<div class="card-body">
+							<div>SMART COMPUTING</div>
+							<div class="designation">
+								<ul class="lists">
+
+									<li> Future Smart Computing Paradigms</li>
+									<li>Security, Privacy, and Trust issues in Smart Computing </li>
+									<li> Smart Computing for Cyber-physical Systems
+									</li>
+									<li> Augmented Reality/ Virtual Reality</li>
+									<li> Applications of Smart Computing <ul>
+											<li>Smart healthcare and digital epidemiology
+											</li>
+											<li>Smart agriculture
+											</li>
+											<li>Smart infrastructures
+											</li>
+											<li>Smart cities
+											</li>
+											<li>Smart energy, transportation, water distribution systems
+	
+											</li>
+											<li>Future Factories / Smart factories </li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			
+				<div class="col-md-4 list-item-box">
+					<div class="card">
+						<div class="card-body">
+							<div>SMART COMPUTING</div>
+							<div class="designation">
+								<ul class="lists">
+									<li>Networking: Future Internet/Future Networks </li>
+									<li>QoS/QoE and Resource Management </li>
+									<li>Optical Networks </li>
+									<li>Wireless, Mobile, Adhoc and Sensor Networks </li>
+									<li>Ubiquitous Networks </li>
+									<li>Network Security </li>
+									<li>Multimedia Networking </li>
+									<li>Communication Systems </li>
+									<li>Coding and Information Theory </li>
+									<li>Wireless, UWB, Ultrasonic Communications </li>
+									<li>Satellite Communications </li>
+									<li>Network Coding</li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			
+			</div><!--//row-->
+
+			<!-- <div class="speakers-cta text-center py-3"><a class="btn btn-primary btn-lg" href="#" target="_blank">Get
+					Tickets</a></div> -->
+
+		</div><!--//container-->
+
+	</section>
+
+
 	<section id="registration-section" class="registration-section section">
 		<div class="container">
 			<h3 class="section-heading text-center mb-5">Registration &amp; Participation Policy</h3>
@@ -322,11 +537,11 @@
 
 													<tr>
 														<td>Extra Page</td>
-														<td>Rs.35,0000/-</td>
+														<td>Rs.1800/-</td>
 													</tr>
 													<tr>
 														<td>Participant Registration</td>
-														<td>Rs.8000/-</td>
+														<td>Rs.2000/-</td>
 
 													</tr>
 												</tbody>
@@ -353,7 +568,7 @@
 													Category
 												</li>
 												<li>If you have any concerns regarding the registration policy or fees
-													please feel to write us at conference.ictcs@gmail.com.</li>
+													please feel to write us at contact@icasca.in</li>
 											</ul>
 
 										</div>
@@ -863,7 +1078,7 @@
 								<div class="mb-1">
 									<div class="desc px-3">
 										<ul class="list-style">
-											<li class="list-item">Amit Shah, CEO</li>
+											<li class="list-item">Dr. Savita Gandhi</li>
 										</ul>
 									</div>
 								</div>
@@ -882,7 +1097,7 @@
 								<div class="mb-1">
 									<div class="desc px-3">
 										<ul class="list-style">
-											<li class="list-item">Sudhir Nanavati, President</li>
+											<li class="list-item">Dr. Savita Gandhi</li>
 										</ul>
 									</div>
 								</div>
@@ -902,52 +1117,181 @@
 							data-bs-parent="#accordionExample">
 							<div class="accordion-body">
 								<div class="mb-1">
-									<div class="desc px-3">
-										<ul class="list-style">
-												<li class="list-item">Sheetal G. Mungale, Assistant Professor, Electronics and Telecommunication Engineering Department</li>
-												<li class="list-item">Shivangi Gandhi, Assistant Professor</li>
-												<li class="list-item">Chinmay B Joshi, Assistant Professor</li>
-												<li class="list-item">Dr. Purvi Ramanuj, Assistant Professor</li>
-												<li class="list-item">Dr. Pankaj Pathak, Assistant Professor</li>
-												<li class="list-item">Prof. (Dr.) Pinal J. Patel, Assistant Professor, CE department</li>
-												<li class="list-item">Dr. Saziyabegum Saiyed, Assistant Professor (MCA)</li>
-												<li class="list-item">Dr. Hemina Bhavsar, Assistant Professor (MCA)</li>
-												<li class="list-item">Prof. Rachna A. Karnavat, Assistant Professor & Dept. of Information Technology</li>
-												<li class="list-item">Dr. Khushbu Maurya, Assistant Professor & Computer Engineering Department</li>
-												<li class="list-item">Dr. Yagnik Rathod, Assistant Professor</li>
-												<li class="list-item">Dr. Minakshi M. Wanjari, Assistant Professor, Electronics and Telecommunication Engineering Department</li>
-												<li class="list-item">Dr. Jayshri A. Patil, Assistant Professor, CE/IT School of Engineering</li>
-												<li class="list-item">Dr. Jaideepsinh Raulji, Assistant Professor, Computer Science and Engineering</li>
-												<li class="list-item">Dr. Hetal Bhavsar, Assistant Professor, Computer Science and Engineering Department</li>
-												<li class="list-item">Dr. Dikshan N. Shah, Assistant Professor, Department of Computer Science</li>
-												<li class="list-item">Dr. Chirag Devendrabhai Mehta, Assistant Professor, Department of Computer Science</li>
-												<li class="list-item">Dr. Arpankumar Raval, Assistant Professor, Faculty of Computer Science and Applications CMPICA</li>
-												<li class="list-item">Dr. Mala Mehta, Assistant Professor, HoD-IT Department</li>
-												<li class="list-item">Dr. Virendra K. Barot, Assistant Professor, I.T department</li>
-												<li class="list-item">Prof. Rachana Chhajed, Assistant Professor, Information Technology</li>
-												<li class="list-item">Dr. Falguni Maneshkumar Patel, Assistant Professor, Information Technology Department</li>
-												<li class="list-item">Dr. Rupam Gupta, Assistant Professor, MCA Department</li>
-												<li class="list-item">Dr. Hetal Thaker, Assistant Professor, School of Management Studies</li>
-												<li class="list-item">Dr. Hitesh Chhinkaniwala, Associate Dean (Academics) & Associate Professor, faculty of engineering sciences & technology</li>
-												<li class="list-item">Dr. Chintan Bhupeshbhai Thacker, Associate Professor</li>
-												<li class="list-item">Dr. Mehul Parikh, Associate Professor</li>
-												<li class="list-item">Dr. Akhilendra Khare, Associate Professor</li>
-												<li class="list-item">Dr. Meetu Joshi, Associate Professor & Head IMCA Department</li>
-												<li class="list-item">Dr. Jaimin N. Undavia, Associate Professor and Head, Startup Cell</li>
-												<li class="list-item">Dr. Bijal Talati, Associate Professor HoD CE, Parul Institute of Technology</li>
-												<li class="list-item">Dr. Santosh Sambare, Associate Professor in Computer Engineering</li>
-												<li class="list-item">Dr. Vishwas Raval, Associate Professor, Department of Strategic Technologies (Cyber/Space Security)-ICT Chairperson-CISO, School of National Security Studies</li>
-												<li class="list-item">Dr. Ashwin Dobariya, Associate Professor, Faculty of Computer Applications</li>
-												<li class="list-item">Dr. Neha Soni, Associate Professor, HoD Computer Engineering Department</li>
-												<li class="list-item">Dr. Ajaysinh Rathod, Associate Professor, HoD CSD</li>
-												<li class="list-item">Dr. Shivani A. Trivedi, Associate Professor, MCA</li>
-												<li class="list-item">Dr. Meghna Patel, Associate Professor, MCA</li>
-												<li class="list-item">Dr. Ronakkumar Patel, Associate Professor, Shrimad Rajchandra Institute of Management and Computer Application</li>
-												<li class="list-item">Dr. Jonita Roman, Associate Professor, Head of MCA Department</li>
-												<li class="list-item">Dr. Kruti Jani, Associate Professor, MCA programme</li>
-												<li class="list-item">Dr. Jinal Tailor, Associate Professor & HoD (MCA)</li>
-												<li class="list-item">Dr. Amisha Shingala, Asst prof , MCA Department</li>	
-										</ul>
+									<div class="row">
+										<div class="col-md-4 list-item-box">
+											<div class="card">
+												<div class="card-body">
+													<div>Sheetal G. Mungale</div>
+													<div class="designation">G H Raisoni College of Engineering, Nagpur
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 list-item-box">
+											<div class="card">
+												<div class="card-body">
+													<div>Shivangi Gandhi</div>
+													<div class="designation">Ld government College of Engineering</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 list-item-box">
+											<div class="card">
+												<div class="card-body">
+													<div>Chinmay B Joshi</div>
+													<div class="designation">A D Patel Institute of Technology</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 list-item-box">
+											<div class="card">
+												<div class="card-body">
+													<div>Dr. Purvi Ramanuj</div>
+													<div class="designation">Ld college of Engineering</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 list-item-box">
+											<div class="card">
+												<div class="card-body">
+													<div>Dr. Pankaj Pathak</div>
+													<div class="designation">Symbiosis International</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 list-item-box">
+											<div class="card">
+												<div class="card-body">
+													<div>Prof. (Dr.) Pinal J. Patel</div>
+													<div class="designation">Government Engineering College Gandhinagar
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 list-item-box">
+											<div class="card">
+												<div class="card-body">
+													<div>Prof. Rachna A. Karnavat</div>
+													<div class="designation">Pune Institute of Computer Technology</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 list-item-box">
+											<div class="card">
+												<div class="card-body">
+													<div>Dr. Khushbu Maurya</div>
+													<div class="designation">Indus University</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 list-item-box">
+											<div class="card">
+												<div class="card-body">
+													<div>Dr. Yagnik Rathod</div>
+													<div class="designation">GEC-Dahod</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 list-item-box">
+											<div class="card">
+												<div class="card-body">
+													<div>Dr. Minakshi M. Wanjari</div>
+													<div class="designation">G H Raisoni College of Engineering, Nagpur
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 list-item-box">
+											<div class="card">
+												<div class="card-body">
+													<div>Dr. Jayshri A. Patil</div>
+													<div class="designation">P P Savani University</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 list-item-box">
+											<div class="card">
+												<div class="card-body">
+													<div>Dr. Jaideepsinh Raulji</div>
+													<div class="designation">Navrachana University, Vadodara</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 list-item-box">
+											<div class="card">
+												<div class="card-body">
+													<div>Dr. Hetal Bhavsar</div>
+													<div class="designation">M.S. University-Vadodara</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 list-item-box">
+											<div class="card">
+												<div class="card-body">
+													<div>Dr. Dikshan N Shah</div>
+													<div class="designation">Vanita Vishram Women's University, Surat
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 list-item-box">
+											<div class="card">
+												<div class="card-body">
+													<div>Dr. Chirag Devendrabhai Mehta</div>
+													<div class="designation">Vanita Vishram Women's University, Surat
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 list-item-box">
+											<div class="card">
+												<div class="card-body">
+													<div>Dr. Arpankumar Raval</div>
+													<div class="designation">Charusat University</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 list-item-box">
+											<div class="card">
+												<div class="card-body">
+													<div>Dr. Mala Mehta</div>
+													<div class="designation">SVIT-Vasad, GTU</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 list-item-box">
+											<div class="card">
+												<div class="card-body">
+													<div>Dr. Virendra K Barot</div>
+													<div class="designation">Government Engineering College, Bhavnagar
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 list-item-box">
+											<div class="card">
+												<div class="card-body">
+													<div>Prof. Rachana Chhajed</div>
+													<div class="designation">Pune Institute of Computer Technology</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 list-item-box">
+											<div class="card">
+												<div class="card-body">
+													<div>Dr. Falguni Maneshkumar Patel</div>
+													<div class="designation">SVIT-Vasad, GTU</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 list-item-box">
+											<div class="card">
+												<div class="card-body">
+													<div>Dr. Rupam Gupta</div>
+													<div class="designation">SVIT-Vasad, GTU</div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -987,7 +1331,7 @@
 								<div class="mb-1">
 									<div class="desc px-3">
 										<ul class="list-style">
-											<li class="list-item">Sudhir Nanavati, President</li>
+											<li class="list-item">Harshal Arolkar</li>
 										</ul>
 									</div>
 								</div>
