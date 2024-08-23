@@ -1,0 +1,99 @@
+.fluid-container {
+  max-width: 100%; /* Ensure it uses the full width of its container */
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif; /* Modern font */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the container takes at least the full viewport height */
+
+  .header {
+    background: #FF5722; /* Deep orange background */
+    color: white; /* White text */
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 4px solid #E64A19; /* Darker orange bottom border */
+    z-index:unset;
+    font-size:unset;
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  .content {
+    flex: 1; /* Takes up remaining space */
+    padding: 1.5rem;
+    background: #FFEBEE; /* Light pink background */
+
+    .overview, .benefits, .examples {
+      background: #ffffff; /* White background for sections */
+      border-radius: 8px; /* Rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+
+      h2 {
+        margin-top: 0;
+        color: #FF5722; /* Deep orange color for headers */
+        font-size: 1.5rem;
+      }
+
+      p {
+        color: #333;
+        line-height: 1.6;
+      }
+
+      ul {
+        list-style: none; /* Remove default list styling */
+        padding: 0;
+
+        li {
+          padding: 0.5rem 0;
+          border-bottom: 1px solid #ddd; /* Light gray border */
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          strong {
+            color: #333;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    background: #E64A19; /* Darker orange background */
+    color: white; /* White text */
+    padding: 1rem;
+    text-align: center;
+    border-top: 4px solid #FF5722; /* Deep orange top border */
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

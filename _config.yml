@@ -18,7 +18,6 @@ icon_size: 75px
 
 # Google-analytics
 google-analytics:
-  id: ""
-
+  id: ""  
 
 exclude: ['package.json', 'src' , 'node_modules']

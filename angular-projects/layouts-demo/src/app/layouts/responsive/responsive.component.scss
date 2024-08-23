@@ -1,0 +1,101 @@
+.responsive-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+
+  .header {
+    background: #FF5722; /* Bright orange background */
+    color: white; /* White text */
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 4px solid #E64A19; /* Darker orange bottom border */
+    animation: fadeInUp 1s ease-out;
+    z-index:unset;
+    font-size:unset;
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  .content {
+    flex: 1; /* Takes up remaining space */
+    padding: 1.5rem;
+    background: #FFE0B2; /* Light peach background */
+
+    .overview, .benefits, .examples {
+      background: #ffffff; /* White background for sections */
+      border-radius: 8px; /* Rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      animation: fadeIn 1s ease-in-out;
+
+      h2 {
+        margin-top: 0;
+        color: #FF5722; /* Bright orange color for headers */
+        font-size: 1.6rem;
+      }
+
+      p, ul {
+        color: #333;
+        line-height: 1.6;
+      }
+
+      ul {
+        list-style: none; /* Remove default list styling */
+        padding: 0;
+
+        li {
+          padding: 0.5rem 0;
+          border-bottom: 1px solid #ddd; /* Light gray border */
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          strong {
+            color: #333;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    background: #E64A19; /* Darker orange background */
+    color: white; /* White text */
+    padding: 1rem;
+    text-align: center;
+    border-top: 4px solid #FF5722; /* Bright orange top border */
+    animation: fadeInUp 1s ease-out;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

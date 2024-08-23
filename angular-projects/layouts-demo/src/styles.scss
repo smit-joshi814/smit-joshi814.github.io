@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+header {
+  background: #4CAF50; /* Green background */
+  color: white; /* White text */
+  padding: 1rem 2rem; /* Padding for spacing */
+  text-align: center; /* Centered text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  font-family: 'Arial', sans-serif; /* Modern font */
+  font-size: 1.5rem; /* Larger font size */
+  position: sticky; /* Sticky header */
+  top: 0; /* Stick to the top */
+  z-index: 1000; /* Ensure it stays on top */
+}
