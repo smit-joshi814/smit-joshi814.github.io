@@ -1,10 +1,10 @@
 .fluid-container {
   max-width: 100%; /* Ensure it uses the full width of its container */
+  min-height: 100vh; /* Ensures the container takes at least the full viewport height */
   margin: 0 auto;
   font-family: 'Arial', sans-serif; /* Modern font */
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensures the container takes at least the full viewport height */
 
   .header {
     background: #FF5722; /* Deep orange background */
