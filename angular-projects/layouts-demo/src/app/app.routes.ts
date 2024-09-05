@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 import { InfoComponent } from './info/info.component';
 import { ResponsiveComponent } from './layouts/responsive/responsive.component';
 import { FluidComponent } from './layouts/fluid/fluid.component';
-import { FlexibleComponent } from '../app/layouts/flexible/flexible.component';
+import { FlexibleComponent } from './layouts/flexible/flexible.component';
 
 export const routes: Routes = [
   {
