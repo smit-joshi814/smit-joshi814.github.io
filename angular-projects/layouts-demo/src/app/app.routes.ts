@@ -7,7 +7,7 @@ import { FlexibleComponent } from '../app/layouts/flexible/flexible.component';
 
 export const routes: Routes = [
   {
-    path: 'info',
+    path: '',
     title: 'Info',
     component: InfoComponent,
   },
@@ -32,8 +32,8 @@ export const routes: Routes = [
     component: ResponsiveComponent,
   },
   {
-    path: '',
-    redirectTo: '/info',
+    path: '**',
+    component:InfoComponent,
     pathMatch: 'full',
   },
 ];

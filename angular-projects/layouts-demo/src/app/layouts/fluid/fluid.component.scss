@@ -1,10 +1,7 @@
 .fluid-container {
-  max-width: 100%; /* Ensure it uses the full width of its container */
-  min-height: 100vh; /* Ensures the container takes at least the full viewport height */
+  width: 100%; /* Ensure it uses the full width of its container */
   margin: 0 auto;
   font-family: 'Arial', sans-serif; /* Modern font */
-  display: flex;
-  flex-direction: column;
 
   .header {
     background: #FF5722; /* Deep orange background */
@@ -12,8 +9,8 @@
     padding: 1.5rem;
     text-align: center;
     border-bottom: 4px solid #E64A19; /* Darker orange bottom border */
-    z-index:unset;
-    font-size:unset;
+    z-index: unset;
+    font-size: unset;
 
     h1 {
       margin: 0;
@@ -27,16 +24,20 @@
   }
 
   .content {
+    display: flex; /* Flexbox layout */
+    flex-direction: column;
     flex: 1; /* Takes up remaining space */
     padding: 1.5rem;
     background: #FFEBEE; /* Light pink background */
 
+    /* Fluid layout using percentage-based widths */
     .overview, .benefits, .examples {
       background: #ffffff; /* White background for sections */
       border-radius: 8px; /* Rounded corners */
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
       padding: 1.5rem;
       margin-bottom: 1.5rem;
+      width: 100%; /* Full width in fluid container */
 
       h2 {
         margin-top: 0;
@@ -78,6 +79,27 @@
   }
 }
 
+/* Responsive fluid adjustments using media queries */
+@media screen and (max-width: 768px) {
+  .content {
+    padding: 1rem; /* Less padding on smaller screens */
+  }
+
+  .header h1 {
+    font-size: 1.5rem; /* Smaller header text on mobile */
+  }
+
+  .overview, .benefits, .examples {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .footer {
+    padding: 0.5rem;
+    font-size: 0.9rem; /* Smaller font size for footer */
+  }
+}
+
+/* Animations for dynamic fluid effects */
 @keyframes slideIn {
   from {
     transform: translateY(-100%);
