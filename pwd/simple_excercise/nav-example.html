@@ -1,0 +1,109 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+</head>
+<style>
+
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+    .nav {
+        list-style-type: none;
+        width: 200px;
+        background-color: beige;
+    }
+
+    .nav-item {
+        font-size: 20px;
+        padding: 5px;
+    }
+
+    .active{
+        background-color: lightgreen;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .nav-vertical {
+        display: block;
+    }
+
+    .nav-horizontal-dark{
+        background-color: black;
+        color: white;
+    }
+
+    .nav-horizontal-light{
+        background-color: white;
+        color: black;
+    }
+
+    .nav-horizontal-light .active a{
+        color: white;
+    }
+
+    .nav-horizontal ul {
+        /* padding: 10px; */
+        width: 100%;
+        list-style-type: none;
+        display: flex;
+    }
+
+    
+
+    .nav-horizontal .about {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        padding-right: 10px;
+    }
+
+    .nav-item-dark a{
+        font-size: 20px;
+        padding: 5px;
+        color: white;
+    }
+
+</style>
+
+<body>
+    <h1>Vertical</h1>
+    <div class="nav-vertical">
+        <ul class="nav">
+            <li class="nav-item active"><a href="#">Home</a></li>
+            <li class="nav-item"><a href="#">News</a></li>
+            <li class="nav-item"><a href="#">Contact</a></li>
+            <li class="nav-item"><a href="#">About</a></li>
+        </ul>
+    </div>
+
+    <h1>Horizontal</h1>
+    <div class="nav-horizontal-dark nav-horizontal">
+        <ul>
+            <li class="nav-item-dark active"><a href="#">Home</a></li>
+            <li class="nav-item-dark"><a href="#">News</a></li>
+            <li class="nav-item-dark"><a href="#">Contact</a></li>
+            <li class="nav-item-dark about"><a href="#">About</a></li>
+        </ul>
+    </div>
+
+
+    <h1>Horizontal White</h1>
+    <div class="nav-horizontal-light nav-horizontal">
+        <ul class="nav" style="background-color:lightgray">
+            <li class="nav-item"><a href="#">Home</a></li>
+            <li class="nav-item"><a href="#">News</a></li>
+            <li class="nav-item active"><a href="#">Contact</a></li>
+            <li class="nav-item about"><a href="#">About</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
